@@ -28,6 +28,7 @@ namespace X4Sharp.Modules
             e.AddField("submitrecord", "Submits a record from Geometry Dash! Input: username, levelname, percentage, videolink");
             e.AddField("viewrecords", "Views records of the players. Input: username");
             e.AddField("level", "Shows the info of a level! Input: levelID");
+            e.AddField("pcspecs", "Shows PC specs of registered users. Contact Monstahhh to add your specs.");
 
             await ReplyAsync("", embed: e);
         }
