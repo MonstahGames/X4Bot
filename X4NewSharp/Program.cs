@@ -24,7 +24,7 @@ namespace X4Sharp
             _client = new DiscordSocketClient();
             Console.WriteLine("Connecting to X4Bot");
             _client.Ready += Ready;
-            string _token = "";
+            string _token = "MzUwOTUxODgyNzc0MjgyMjUw.DLVDWg.h1tOGnU5ENNHwsodSNcsEhA-LCo";
             await _client.LoginAsync(TokenType.Bot, _token);
             await _client.StartAsync();
             Console.WriteLine("Connected!");

@@ -29,8 +29,8 @@ namespace X4Sharp.Modules
             e.AddField("viewrecords", "Views records of the players. Input: username");
             e.AddField("level", "Shows the info of a level! Input: levelID");
             e.AddField("pcspecs", "Shows PC specs of registered users. Contact Monstahhh to add your specs.");
-
-            await ReplyAsync("", embed: e);
+            Embed a = e.Build();
+            await ReplyAsync("", embed: a);
         }
         [Command("sayd")]
         public async Task Sayd(string input)
@@ -152,7 +152,8 @@ namespace X4Sharp.Modules
                 e.AddField("End of Info", "**------------------------------**");
                
             }
-            await ReplyAsync("", embed: e);
+            Embed a = e.Build();
+            await ReplyAsync("", embed: a);
 
         }
         [Command("updaterecord")]
@@ -211,7 +212,8 @@ namespace X4Sharp.Modules
             e.AddField("Difficulty", level[27]);
             e.AddField("Downloads", level[13]);
             e.AddField("Likes", level[19]);
-            await ReplyAsync("", embed: e);
+            Embed a = e.Build();
+            await ReplyAsync("", embed: a);
         }
         [Command("pcspecs")]
         public async Task PCSpecs(string name)
@@ -237,8 +239,8 @@ namespace X4Sharp.Modules
             e.AddField("GPU", ja[5]);
             e.AddField("Case", ja[6]);
             e.AddField("PSU", ja[7]);
-
-            await Context.Channel.SendMessageAsync("", embed: e);
+            Embed a = e.Build();
+            await Context.Channel.SendMessageAsync("", embed: a);
         }
         [Command("penis")]
         public async Task PenisCMD(string user)
@@ -250,7 +252,8 @@ namespace X4Sharp.Modules
             e.Author = new EmbedAuthorBuilder().WithIconUrl("https://images-ext-2.discordapp.net/external/Z8pafsoqXGAm3HUrpgedv02zhz9FxHQwKjNJxfn9CYE/https/cdn.discordapp.com/icons/238345584652713984/3458909894ab833b363ab21a6846b01d.jpg?width=80&height=80").WithName("X4Bot");
             e.Color = new Color(0x661967);
             e.AddField("Penis", user + "'s dick is " + longs + "cm long.");
-            await Context.Channel.SendMessageAsync("", embed: e);
+            Embed a = e.Build();
+            await Context.Channel.SendMessageAsync("", embed: a);
         }
         [Command("ja")]
         public async Task JaCMD()
