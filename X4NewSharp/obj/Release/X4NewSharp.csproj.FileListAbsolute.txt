@@ -55,3 +55,4 @@ C:\Users\ThybePC\Documents\GitHub\X4Bot\X4NewSharp\bin\Release\System.Collection
 C:\Users\ThybePC\Documents\GitHub\X4Bot\X4NewSharp\bin\Release\System.Interactive.Async.xml
 C:\Users\ThybePC\Documents\GitHub\X4Bot\X4NewSharp\obj\Release\X4NewSharp.exe
 C:\Users\ThybePC\Documents\GitHub\X4Bot\X4NewSharp\obj\Release\X4NewSharp.pdb
+C:\Users\ThybePC\Documents\GitHub\X4Bot\X4NewSharp\obj\Release\X4NewSharp.csprojResolveAssemblyReference.cache

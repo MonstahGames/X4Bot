@@ -3,6 +3,7 @@ using Discord.Commands;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System;
 
 namespace X4Sharp.Modules
@@ -29,6 +30,10 @@ namespace X4Sharp.Modules
             e.AddField("viewrecords", "Views records of the players. Input: username");
             e.AddField("level", "Shows the info of a level! Input: levelID");
             e.AddField("pcspecs", "Shows PC specs of registered users. Contact Monstahhh to add your specs.");
+            e.AddField("penis", "Measures Penis size [name]");
+            e.AddField("thybe", "cool guy's face");
+            e.AddField("jake", "Jake's face lol");
+            e.AddField("sysinfo", "Shows info about the computer where X4Bot runs on.");
             Embed a = e.Build();
             await ReplyAsync("", embed: a);
         }
@@ -288,5 +293,33 @@ namespace X4Sharp.Modules
         //    }
         //    ka = -1;
         //}
+        [Command("jakeface")]
+        public async Task JakeFaceCMD ()
+        {
+            await Context.Channel.SendFileAsync("jake.png");
+            await Context.Channel.SendMessageAsync("lmfao");
+        }
+        [Command("thybe")]
+        public async Task ThybeCMD ()
+        {
+            await Context.Channel.SendFileAsync("monsteh.png");
+        }
+        [Command("sysinfo")]
+        public async Task SysInfoCMD ()
+        {
+            PerformanceCounter perfCPUCount = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
+            PerformanceCounter perfMemCount = new PerformanceCounter("Memory", "Available MBytes");
+
+            string memUsage = perfMemCount.NextValue().ToString() + "MB";
+
+            EmbedBuilder e = new EmbedBuilder();
+            e.Author = new EmbedAuthorBuilder().WithIconUrl("https://images-ext-2.discordapp.net/external/Z8pafsoqXGAm3HUrpgedv02zhz9FxHQwKjNJxfn9CYE/https/cdn.discordapp.com/icons/238345584652713984/3458909894ab833b363ab21a6846b01d.jpg?width=80&height=80").WithName("X4Bot");
+            e.Color = new Color(0x661967);
+            e.AddField("CPU Usage", $"{perfCPUCount.NextValue()}%");
+            e.AddField("Memory Usage", memUsage);
+            Embed a = e.Build();
+            await ReplyAsync("", embed: a);
+
+        }
     }
 }
